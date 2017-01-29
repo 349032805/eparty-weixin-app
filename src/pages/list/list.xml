@@ -7,5 +7,14 @@
    		<view class="tb-th">评分</view>
    </view>
 
+  	<view class="table-body" scroll-y="true">
+	    <block wx:for="{{ list }}" wx:key="{{ item.key }}">
+	        <navigator url="" hover-class="none">
+	          <view class="title">
+	            <text>{{index + 1}}: {{ item.name }}</text>
+	          </view>
+	        </navigator>
+	    </block>
+  	</view>
 
 </view>
