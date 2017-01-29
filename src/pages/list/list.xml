@@ -1,6 +1,6 @@
 <!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
 <view class="main">
-   <view class="table-head">
+   <view class="row">
    		<view class="tb-th">排名</view>
    		<view class="tb-th">姓名</view>
    		<view class="tb-th">性别</view>
@@ -8,13 +8,14 @@
    </view>
 
   	<view class="table-body" scroll-y="true">
-	    <block wx:for="{{ list }}" wx:key="{{ item.key }}">
-	        <navigator url="" hover-class="none">
-	          <view class="title">
-	            <text>{{index + 1}}: {{ item.name }}</text>
-	          </view>
-	        </navigator>
-	    </block>
+  		<block wx:for="{{ list }}" wx:key="{{ item.key }}">
+	  		<view class="row">
+			   <view class="tb-td">NO.{{index + 1}}</view>
+			   <view class="tb-td">{{ item.name }}</view>
+			   <view class="tb-td">{{ item.sex == 0?'男':'女'}}</view>
+			   <view class="tb-td">{{ item.score }}</view>
+		   	</view>
+		</block>
   	</view>
 
 </view>

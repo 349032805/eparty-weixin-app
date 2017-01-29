@@ -18,26 +18,22 @@ Page({
       {
         'name': '张三',
         'sex': 0,
-        'score': 80,
-        'date': 1483523354510
+        'score': 80
       },
       {
         'name': '尼古拉斯赵四',
         'sex': 0,
-        'score': 99,
-        'date': 1483423254510
+        'score': 99
       },
       {
         'name': '王五',
         'score': 76,
-        'sex': 1,
-        'date': 1483723454510
+        'sex': 1
       },
       {
         'name': '田七',
         'score': 77,
-        'sex': 1,
-        'date': 1483926354510
+        'sex': 1
       }]
 
     this.setData({list:list});
