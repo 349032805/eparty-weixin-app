@@ -5,7 +5,8 @@
   "pages": [
     "pages/index/index",
     "pages/demo/demo",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/example/example"
     // Dont remove this comment
   ],
   // Window configuration

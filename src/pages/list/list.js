@@ -36,7 +36,7 @@ Page({
         'sex': 1
       }]
 
-    this.setData({list:list});
+    this.setData({list: list})
   },
 
   /**
