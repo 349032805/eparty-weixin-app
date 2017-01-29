@@ -1,0 +1,45 @@
+<view class="main">
+  <view class="store-theme">
+    <image src="../../images/store_bg.png" class="store-bg" />
+    <view class="bg-layer"></view>
+    <view class="store-table">
+		<text class="block font24">弄堂里（文三路店）</text>
+		<text class="block font20">餐台 A120</text>
+	</view>
+
+	<view class="store-logo"></view>
+  </view>
+
+  <view class="broadcast">
+	<image src="../../images/broadcast_icon.png" class="broadcast-icon" />
+	<text class="broadcast-content">全场在线点菜满100减5</text>
+  </view>
+
+  <view class="four-labels">
+	<view class="row">
+	 	<navigator url="../list/list" class="float-left" style="background: #fbf6f1;">
+			<image src="../../images/order_food.png" class="box-icon" />
+			<text class="block">堂食点餐</text>
+		</navigator>
+
+		<navigator url="../item/item" class="float-right" style="background: #e8fae4;">
+			<image src="../../images/weixin_pay.png" class="box-icon" />
+			<text class="block">微信支付</text>
+		</navigator>
+	</view>
+
+	<view class="row" style="margin-top:10rpx;">
+		<navigator url="../item/item" class="float-left" style="background: #eef7fc;">
+			<image src="../../images/has_order.png" class="box-icon" />
+			<text style="position: relative;" class="block">已点订单<text class="order-num">5</text></text>
+		</navigator>
+
+		<navigator url="../item/item" class="float-right" style="background: #fef3f0;">
+			<image src="../../images/comment.png" class="box-icon" />
+			<text class="block">评价打赏</text>
+		</navigator>
+	</view>
+
+  </view>
+
+</view>
