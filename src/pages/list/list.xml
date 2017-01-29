@@ -9,7 +9,13 @@
 
   	<view class="table-body" scroll-y="true">
   		<block wx:for="{{ list }}" wx:key="{{ item.key }}">
-	  		<view class="row">
+	  		<view class="row odd" wx:if="{{index % 2 != 0}}">
+			   <view class="tb-td">NO.{{index + 1}}</view>
+			   <view class="tb-td">{{ item.name }}</view>
+			   <view class="tb-td">{{ item.sex == 0?'男':'女'}}</view>
+			   <view class="tb-td">{{ item.score }}</view>
+		   	</view>
+		   	<view class="row even" wx:if="{{index % 2 == 0}}">
 			   <view class="tb-td">NO.{{index + 1}}</view>
 			   <view class="tb-td">{{ item.name }}</view>
 			   <view class="tb-td">{{ item.sex == 0?'男':'女'}}</view>
