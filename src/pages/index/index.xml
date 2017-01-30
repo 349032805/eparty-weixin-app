@@ -34,7 +34,7 @@
 			<text style="position: relative;" class="block">已点订单<text class="order-num">5</text></text>
 		</navigator>
 
-		<navigator url="../item/item" class="float-right" style="background: #fef3f0;">
+		<navigator url="../example/example" class="float-right" style="background: #fef3f0;">
 			<image src="../../images/comment.png" class="box-icon" />
 			<text class="block">评价打赏</text>
 		</navigator>
