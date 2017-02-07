@@ -6,6 +6,7 @@
  */
 const wechat = require('./utils/wechat')
 const Promise = require('./utils/bluebird')
+const cncode = require('./utils/cncode.js')
 
 App({
   /**
@@ -19,7 +20,8 @@ App({
   },
 
   // 不是只能定义`data`，别的也可以
-  other: 'other variables',
+  wechat: wechat,
+  cncode: cncode,
 
   /**
    * 获取用户信息

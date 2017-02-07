@@ -24,4 +24,26 @@
 		</block>
   	</view>
 
+  	<view class="title">
+  		<text>Cncode https://cnodejs.org/</text>
+  	</view>
+  	<scroll-view scroll-y="true" class="list" bindscrolltolower="handleLoadMore">
+  		<block wx:for="{{ topicList }}" wx:key="{{ item.key }}">
+  			<view class="topic">
+  				<text>11111</text>
+  			</view>
+  		</block>
+
+  		<view class="tips">
+	    	<view wx:if="{{ hasMore }}">
+		        <image src="/images/loading.gif" mode="aspectFill"/>
+		        <text>玩命加载中...</text>
+	      	</view>
+		    <view wx:else>
+		        <text>没有更多内容了</text>
+		    </view>
+	    </view>
+  	</scroll-view>
+
+  	 <loading hidden="{{ !loading }}">加载中...</loading>
 </view>

@@ -1,5 +1,5 @@
 // 获取全局应用程序实例对象
-// const app = getApp()
+const app = getApp()
 
 // 创建页面实例对象
 Page({
@@ -7,7 +7,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    loading: true,
+    hasMore: true,
+    type: 'topics'
+    page: 1,
+    tab: '',
+    size: 20,
+    mdrender: 'true'
+    topicList: []
+  },
+
+  handleLoadMore () {
+    if (!this.data.hasMore) return
+
+    return app.cncode.find(this.data.type,this.data.page++, this.data.tab, this.data.size,this.data.mdrender)
+      .then(d => {
+        if (d.subjects.length) {
+          this.setData({ subtitle: d.title, movies: this.data.movies.concat(d.subjects), loading: false })
+        } else {
+          this.setData({ subtitle: d.title, hasMore: false, loading: false })
+        }
+      })
+      .catch(e => {
+        this.setData({ subtitle: '获取数据异常', loading: false })
+        console.error(e)
+      })
   },
 
   /**
@@ -37,6 +62,8 @@ Page({
       }]
 
     this.setData({list: list})
+
+    this.handleLoadMore()
   },
 
   /**
