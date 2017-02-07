@@ -17,24 +17,24 @@
 
   <view class="four-labels">
 	<view class="row">
-	 	<navigator url="" class="float-left" style="background: #fbf6f1;">
+	 	<navigator url="" style="background: #fbf6f1;">
 			<image src="../../images/order_food.png" class="box-icon" />
 			<text class="block">堂食点餐</text>
 		</navigator>
 
-		<navigator url="" class="float-right" style="background: #e8fae4;">
+		<navigator url="" style="background: #e8fae4;">
 			<image src="../../images/weixin_pay.png" class="box-icon" />
 			<text class="block">微信支付</text>
 		</navigator>
 	</view>
 
 	<view class="row" style="margin-top:20rpx;">
-		<navigator url="../list/list" class="float-left" style="background: #eef7fc;">
+		<navigator url="../list/list" style="background: #eef7fc;">
 			<image src="../../images/has_order.png" class="box-icon" />
 			<text style="position: relative;" class="block">已点订单<text class="order-num">5</text></text>
 		</navigator>
 
-		<navigator url="../example/example" class="float-right" style="background: #fef3f0;">
+		<navigator url="../example/example" style="background: #fef3f0;">
 			<image src="../../images/comment.png" class="box-icon" />
 			<text class="block">评价打赏</text>
 		</navigator>
