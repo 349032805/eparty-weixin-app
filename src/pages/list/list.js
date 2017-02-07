@@ -10,7 +10,7 @@ Page({
     list: [],
     loading: true,
     hasMore: true,
-    type: 'topics'
+    type: 'topics',
     page: 1,
     tab: '',
     size: 20,
@@ -21,7 +21,7 @@ Page({
   handleLoadMore () {
     if (!this.data.hasMore) return
 
-    return app.cncode.find(this.data.type,this.data.page++, this.data.tab, this.data.size,this.data.mdrender)
+    return app.cncode.find(this.data.type, this.data.page++, this.data.tab, this.data.size, this.data.mdrender)
       .then(d => {
         if (d.data.length) {
           this.setData({ topicList: this.data.topicList.concat(d.data), loading: false })

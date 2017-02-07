@@ -1,4 +1,4 @@
-const URI = 'https://cnodejs.org/api/v1/topics'
+const URI = 'https://cnodejs.org/api/v1'
 const fetch = require('./fetch')
 
 /**
@@ -25,7 +25,7 @@ function find (type, page = 1, tab, limit = 20, mdrender = true) {
 
 /**
  * 获取单条类型的数据
- * @param  {Number} id      主题ID
+ * @param  {Number} id     主题ID
  * @return {Promise}       包含抓取任务的Promise
  */
 function findOne (id) {

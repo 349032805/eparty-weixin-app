@@ -30,7 +30,7 @@
   	<scroll-view scroll-y="true" class="list" bindscrolltolower="handleLoadMore">
   		<block wx:for="{{ topicList }}" wx:key="{{ item.key }}">
   			<view class="topic">
-  				<text>11111</text>
+  				<text>{{ item.title }}</text>
   			</view>
   		</block>
 
