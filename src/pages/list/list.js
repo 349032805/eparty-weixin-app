@@ -14,7 +14,7 @@ Page({
     page: 1,
     tab: '',
     size: 20,
-    mdrender: 'true'
+    mdrender: true,
     topicList: []
   },
 
@@ -23,14 +23,13 @@ Page({
 
     return app.cncode.find(this.data.type,this.data.page++, this.data.tab, this.data.size,this.data.mdrender)
       .then(d => {
-        if (d.subjects.length) {
-          this.setData({ subtitle: d.title, movies: this.data.movies.concat(d.subjects), loading: false })
+        if (d.data.length) {
+          this.setData({ topicList: this.data.topicList.concat(d.data), loading: false })
         } else {
-          this.setData({ subtitle: d.title, hasMore: false, loading: false })
+          this.setData({ hasMore: false, loading: false })
         }
       })
       .catch(e => {
-        this.setData({ subtitle: '获取数据异常', loading: false })
         console.error(e)
       })
   },
