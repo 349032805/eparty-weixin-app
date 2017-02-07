@@ -20,12 +20,15 @@ Page({
 
   handleLoadMore () {
     if (!this.data.hasMore) return
+    console.log('-----------aaaa')
 
     return app.cncode.find(this.data.type, this.data.page++, this.data.tab, this.data.size, this.data.mdrender)
       .then(d => {
-        if (d.data.length) {
+        if (d.data.length > 0) {
+          console.log('-----------bbb')
           this.setData({ topicList: this.data.topicList.concat(d.data), loading: false })
         } else {
+          console.log('-----------ccc')
           this.setData({ hasMore: false, loading: false })
         }
       })
