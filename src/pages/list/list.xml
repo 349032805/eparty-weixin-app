@@ -27,8 +27,8 @@
   	<view class="title">
   		<text>Cncode https://cnodejs.org/</text>
   	</view>
-  	<scroll-view scroll-y="true" class="list" bindscrolltolower="handleLoadMore">
-  		<block wx:for="{{ topicList }}" wx:key="{{ item.key }}">
+  	<scroll-view scroll-y="true" style="height:250px;" bindscrolltolower="handleLoadMore">
+  		<block wx:for="{{ topicList }}" wx:key="{{ item.id }}">
   			<view class="topic">
   				<text>{{ item.title }}</text>
   			</view>

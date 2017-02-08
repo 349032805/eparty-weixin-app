@@ -19,6 +19,7 @@ Page({
   },
 
   handleLoadMore () {
+    console.log('-----------dddd')
     if (!this.data.hasMore) return
     console.log('-----------aaaa')
 
